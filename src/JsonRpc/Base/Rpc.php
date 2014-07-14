@@ -164,7 +164,7 @@ class Rpc
     $code = isset($error['code']) ? $error['code'] : null;
     $message = isset($error['message']) ? $error['message'] : null;
 
-    $allowed = array(-32700, -32600, -32601, -32602, -32603);
+    /*$allowed = array(-32700, -32600, -32601, -32602, -32603);
 
     if (!in_array($code, $allowed))
     {
@@ -177,7 +177,7 @@ class Rpc
         return;
       }
 
-    }
+    }*/
 
     return is_int($code) && $code && is_string($message);
 
